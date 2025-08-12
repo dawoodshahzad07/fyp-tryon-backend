@@ -4,7 +4,7 @@ import pathlib
 import io
 import base64
 import logging
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 from flask_cors import CORS
 from PIL import Image
 from google import genai
@@ -69,9 +69,9 @@ def save_image(image, prefix="result"):
         raise
 
 
-
-# Gemini setup
-
+@app.route("/", methods=["GET"])
+def index():
+    return render_template("index.html")
 
 # Helper function to decode base64 image and save it temporarily
 def decode_and_save_base64_image(base64_data, filename):
@@ -202,6 +202,7 @@ def get_result(filename):
 if __name__ == "__main__":
     logger.info("Starting virtual try-on server...")
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
 
 
