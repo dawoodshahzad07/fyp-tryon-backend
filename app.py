@@ -201,7 +201,9 @@ def get_result(filename):
 
 if __name__ == "__main__":
     logger.info("Starting virtual try-on server...")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
+
 
 
 
