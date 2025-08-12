@@ -9,85 +9,8 @@
 </head>
 <body>
     <style>
-        /* Sidebar Footer */
-.sidebar-footer {
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-
-.sidebar-footer p {
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 8px;
-}
-
-.linkedin-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    background: #0077b5;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
-    width: 100px;
-}
-
-.linkedin-link i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-/* Hover Effect */
-.linkedin-link:hover {
-    background: #005582;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar-footer {
-        position: relative;
-        padding: 10px;
-    }
-
-    .linkedin-link {
-        font-size: 14px;
-        padding: 6px 10px;
-    }
-
-    .linkedin-link i {
-        font-size: 16px;
-        margin-right: 5px;
-    }
-}
-
+    
     </style>
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <button class="toggle-btn" id="toggle-btn">
-            <i class="fa fa-bars"></i>
-        </button>
-        <div class="sidebar-content">
-            <div class="sidebar-header">
-                <h3>ImagenAI</h3>
-                <p>Edit and generate images with AI</p>
-            </div>
-        </div>
-
-                    <!-- LinkedIn Profile -->
-                    <div class="sidebar-footer">
-                        <p>Developed by Ali Hamza Sultan</p>
-                        <a href="https://www.linkedin.com/in/ali-hamza-sultan-1ba7ba267/" target="_blank" class="linkedin-link">
-                            <i class="fa fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-    </div>
 
     <!-- Chat Container -->
     <div class="chat-container" id="chat-container">
@@ -130,3 +53,4 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
+
