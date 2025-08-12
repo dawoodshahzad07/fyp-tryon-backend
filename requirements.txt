@@ -1,3 +1,8 @@
 Flask
 Pillow
 google-genai
+python-dotenv
+flask-cors
+requests
+
+
