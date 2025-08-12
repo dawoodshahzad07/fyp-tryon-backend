@@ -174,6 +174,11 @@ def virtual_tryon():
         if not filenames:
             return jsonify({"success": False, "error": "No image generated"}), 500
 
+        # Add 2-minute delay before returning response
+        import time
+        logger.info("Adding 2-minute delay before sending response...")
+        time.sleep(120)  # 120 seconds = 2 minutes
+        
         return jsonify({
             "success": True,
             "imageUrl": f"/results/{filenames[0]}",
